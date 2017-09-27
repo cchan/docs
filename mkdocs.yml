@@ -3,5 +3,5 @@ theme: cinder
 pages:
 - Home: index.md
 - Software Systems: software-systems.md
-- Constitution: constitution.md
+- Team Information: team-info.md
 extra_css: [style/custom.css]
