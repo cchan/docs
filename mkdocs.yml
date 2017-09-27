@@ -2,6 +2,6 @@ site_name: Team Waterloop
 theme: cinder
 pages:
 - Home: index.md
-- Software Systems: software-systems.md
 - Team Information: team-info.md
+- Software Systems: software-systems.md
 extra_css: [style/custom.css]

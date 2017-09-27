@@ -7,7 +7,16 @@ This site is not intended for sharing outside of the team.
 
 ## Adding documentation
 
+The first time, you need to clone the entire repository:
+
 - `git clone https://github.com/teamwaterloop/docs`
+- `cd docs`
+
+Any time after that, you just need to pull the changes from GitHub written by other team members.
+
+- `git pull`
+
+To edit:
 
 - Edit the relevant files in the `docs` folder. Files are written in 
     [Markdown](http://commonmark.org/help/), with a couple of 
@@ -17,7 +26,7 @@ This site is not intended for sharing outside of the team.
 
 - `git commit -m "<a brief descriptive message about what you added>"`
 
-- `git push origin master`
+- `git push` (you may need to enter a username and password)
 
 After pushing, the updated documentation will be compiled and deployed to 
 [docs.teamwaterloop.ca](https://docs.teamwaterloop.ca) within a couple of minutes.
