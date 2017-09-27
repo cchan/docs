@@ -30,6 +30,9 @@ To edit:
 
 After pushing, the updated documentation will be compiled and deployed to 
 [docs.teamwaterloop.ca](https://docs.teamwaterloop.ca) within a couple of minutes.
+You can check the progress of the build on [Travis CI](https://travis-ci.org/teamwaterloop/docs/).
+
+Ask `@clive` if you have any questions.
 
 ## Building locally
 
