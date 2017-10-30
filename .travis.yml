@@ -10,3 +10,20 @@ script:
     - cd docs
     - sphinx-build -b html . _build
     - make html
+after_success:
+- HASH=$(git rev-parse HEAD)
+- VERSION=$(python -c 'import sphinx; print sphinx.__version__')
+- cd site
+- git init
+- git config user.name 'Clive Chan'
+- git config user.email 'cc@clive.io'
+- git remote add origin 'https://'${github_token}'@github.com/teamwaterloop/docs'
+- git fetch sphinx
+- git reset --soft origin/gh-pages
+- git add -A
+- git commit -m 'Deploy '${HASH:0:7}' with Sphinx '${VERSION:16}
+- git push -f origin master:gh-pages
+env:
+  global:
+    secure: MjR5+LdKMwu0UeH/v3+jqBRNKG+pU4BPKUh1hmkug70b0D6OGBvuvtSGRUc/+1Ec8qhaXzOqlFJIQqidoFC0pEj9Lw3vftGdnqJa4NtnrlK1yXsW9aDRET6EwLWSpGiCMxM1UKp61cPIVMeKGSboHkAmGMnZcyuj5ACu1a6gILW6f78rCrTNgs9+3vKpx6ia8R7uCLoL3ARSh8eniAzRGsd5RO6jH9EAuiSadVbC9Rn5r+AfOkG9p++XghWDqB0sOFhxCm3WrZyoG0TqKTGe0fwj7jizjNQ17GeVISewMnMtF7WrYOQkBE7DySZJ9GuUez/3chy0tZujMh7esHBethjwkiJiMkSc4JV3x673597I+h38frUF7fzma6NIGnaX1v0/LUs4eKTkUbLKYQX++7jUq2ctoZXXJ5GM/J9JTYsB473/YSFw3Rn4J3fkua581Hi48vXkscfVZvHU2gxBa2Ua2E9Gl9nEV+ZhpbAn9amzmkaTwThj/TZRqDN4GRtpO6I34DwlcYZFI831K3OwJ4IGuHolXJHjFzf4ZVv5s/DlDD+tjMtjESN44sh/RIo0WI68vLoLlGwO8XKh+WGb8uZZXYVykDwS+RORYjz5uiJRc56q5VjQSAU0ry/+6y/We9QIIH3U2JZkvTjdJbgQkEpvNXd5CKkegSQ94fSJQvI=
+
