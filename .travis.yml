@@ -1,7 +1,6 @@
 language: python
 python:
   - 2.7
-  - 3.6
 install:
     - pip install Sphinx
     - pip install recommonmark
@@ -13,7 +12,7 @@ script:
 after_success:
 - HASH=$(git rev-parse HEAD)
 - VERSION=$(python -c 'import sphinx; print sphinx.__version__')
-- cd site
+- cd _build/html
 - git init
 - git config user.name 'Clive Chan'
 - git config user.email 'cc@clive.io'
