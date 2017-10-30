@@ -6,7 +6,6 @@ install:
     - pip install Sphinx
     - pip install recommonmark
     - pip install sphinx_rtd_theme
-    - a
 script:
     - sphinx-build -b html . _build
     - make html
