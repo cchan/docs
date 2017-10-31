@@ -2,7 +2,7 @@ language: python
 python:
   - 2.7
 install:
-	./scripts/docwizard.sh -install
+    -./scripts/docwizard.sh -install
 script:
     - ./scripts/docwizard.sh -build
 after_success:
