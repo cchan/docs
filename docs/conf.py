@@ -16,8 +16,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
+#import os
+#import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import recommonmark
 from recommonmark.parser import CommonMarkParser
@@ -25,7 +25,6 @@ from recommonmark.transform import AutoStructify
 import sphinx_rtd_theme
 
 # -- General configuration ------------------------------------------------
-sys.path.insert(0, os.path.abspath('_ext'))
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -37,11 +36,8 @@ sys.path.insert(0, os.path.abspath('_ext'))
 extensions = ['sphinx.ext.todo',
     'sphinx.ext.imgmath',
     'sphinx.ext.githubpages',
-	'edit_on_github']
+	]
 	
-edit_on_github_project = 'teamwaterloop/docs'
-edit_on_github_branch = 'master'
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -105,9 +101,20 @@ html_theme = "sphinx_rtd_theme"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ['_static']
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_logo = '_static/_img/logo_black.png'
 html_theme_options = {
+	'logo_only': True,
     'display_version': False,
+}
+
+html_context = {
+	"display_github": True, # Integrate GitHub
+    "github_user": "teamwaterloop", # Username
+    "github_repo": "docs", # Repo name
+	"github_version": "master/", # Version
+    "conf_py_path": "docs/", # Path in the checkout to the docs root
 }
 
 # Custom sidebar templates, must be a dictionary that maps document names
@@ -117,10 +124,10 @@ html_theme_options = {
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
     '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
-}
+        'localtoc.html',
+        'relations.html',
+        ]
+	}
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -179,7 +186,10 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-#### themes #####
+latex_documents = [
+    ('index', 'ReadTheDocs.tex', u'Read the Docs Documentation',
+     u'Eric Holscher, Charlie Leifer, Bobby Grace', 'manual'),
+]
 
 
 #### markdown ####
@@ -189,5 +199,7 @@ def setup(app):
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
+	
+
 
 
