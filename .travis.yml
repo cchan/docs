@@ -1,8 +1,12 @@
 language: python
 python:
   - 2.7
-install: ./scripts/docwizard.sh -install
-script: ./scripts/docwizard.sh -build
+install:
+    - pip install Sphinx
+    - pip install recommonmark
+    - pip install sphinx_rtd_theme
+script:
+    - ./scripts/docwizard.sh -build
 after_success:
     - HASH=$(git rev-parse HEAD)
     - VERSION=$(python -c 'import sphinx; print sphinx.__version__')
