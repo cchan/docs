@@ -49,30 +49,13 @@ if [ "$1" == "-build" ]; then
 	fi
 	
 	echo "Building WaterlooDocs"
-	echo "Checking for make"
-	
-	which make  > /dev/null
-
-	# install make if there is such need
-	if  [ ! $? -eq 0 ]; then
-        echo "Installing make"
-        sudo apt-get install make
-	   	
-		if [ $? -eq 0 ]; then
-        	echo "make installed successfully"
-	fi
-	else
-        echo "make is already installed"
-	fi
-
-	echo "Build started"
 	cd ../docs
 	
 	if [ ! -d "_build" ]; then
 		mkdir _build
 	fi	
 
-	make html
+	sphinx-build -b html . _build
 	cd _build/html
 	
 	if [ cnameURL != "none" ]; then
