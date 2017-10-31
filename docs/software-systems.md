@@ -86,3 +86,7 @@ is currently our main source of information; that will slowly be migrated here.
     * navigate to your home directory in terminal `cd ~/`
     * clone repo `git clone https://github.com/teamwaterloop/communication-system.git`
 > Now you have the entire communication pipeline on RPI. Navigate to server script `cd communication-system/server`. Start it by running `pm2 start server.js`
+
+## Deep
+### Deep1
+### Deep2
