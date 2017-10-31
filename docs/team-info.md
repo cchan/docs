@@ -1,4 +1,5 @@
-# Team Info
+Team Information
+================
 
 ## Mission
 - To strongly represent Waterloo as a hub for innovation through the SpaceX Hyperloop Competition
