@@ -14,8 +14,8 @@ cp -R docs/_build/html $HOME/dist
 
 #go to home and setup git
 cd $HOME
-git config --global user.email "travis@travis-ci.org"
-git config --global user.name "Travis"
+git config --global user.email "cc@clive.io"
+git config --global user.name "Clive Chan"
 
 #using token clone gh-pages branch
 git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git gh-pages > /dev/null
