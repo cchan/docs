@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e # exit with nonzero code if anything fails
+
 # if no argument is provided
 if [ "$#" -lt 1 ]; then
 	echo "Atleast one argument required. Terminating..."
