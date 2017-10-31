@@ -1,10 +1,8 @@
 language: python
 python:
   - 2.7
-install:
-    -./scripts/docwizard.sh -install
-script:
-    - ./scripts/docwizard.sh -build
+install: ./scripts/docwizard.sh -install
+script: ./scripts/docwizard.sh -build
 after_success:
     - HASH=$(git rev-parse HEAD)
     - VERSION=$(python -c 'import sphinx; print sphinx.__version__')
