@@ -1,10 +1,10 @@
 language: python
 python:
   - 2.7
+before_install:
+    - chmod +x scripts/docwizard.sh
 install:
-    - pip install Sphinx
-    - pip install recommonmark
-    - pip install sphinx_rtd_theme
+    - ./scripts/docwizard.sh -install
 script:
     - ./scripts/docwizard.sh -build
 after_success:
