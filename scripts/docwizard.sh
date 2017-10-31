@@ -68,7 +68,7 @@ if [ "$1" == "-build" ]; then
 	
 	if [ cnameURL != "none" ]; then
 		echo "creating CNAME in html: $(pwd)"	
-		echo cnameURL >  CNAME
+		echo ${cnameURL} > CNAME
 	fi
 elif [ "$1" == "-install" ]; then
 	echo "Installing tools to build WaterlooDocs"
