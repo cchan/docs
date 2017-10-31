@@ -63,6 +63,7 @@ if [ "$1" == "-build" ]; then
 	cd _build/html
 	
 	if [ cnameURL != "none" ]; then
+		echo "creating CNAME in html: $(pwd)"	
 		echo cnameURL >  CNAME
 	fi
 elif [ "$1" == "-install" ]; then
