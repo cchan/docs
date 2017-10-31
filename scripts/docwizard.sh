@@ -4,6 +4,10 @@ if [ "$#" -lt 1 ]; then
 	exit 1
 fi
 
+dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+echo "Changing dir to scripts folder: ${dir}"
+cd ${dir}
+
 if [ "$1" == "-h" ] || [ "$1" == "-help" ]; then
 	echo "Usage: $(basename "$0") [-h] [-help] [-install] [-build c] [-clean] [-run p]"
 	
@@ -55,7 +59,7 @@ if [ "$1" == "-build" ]; then
 		mkdir _build
 	fi	
 
-	sphinx-build -b html . _build
+	make html
 	cd _build/html
 	
 	if [ cnameURL != "none" ]; then
