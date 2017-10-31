@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Software Subsystems &mdash; WaterloopDocs 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="WaterloopDocs 1.0 documentation" href="../../index.html"/>
+        <link rel="prev" title="Electrical Subsystems" href="electrical-systems.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo_black.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Team Ovierview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/hyperloop-info.html">Hyperloop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/team-info.html">Team Information</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Goose 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../goose3/pod-overview.html">Pod Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goose3/mechanical-systems.html">Mechanical Subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goose3/electrical-systems.html">Electrical Subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goose3/software-systems.html">Software Subsystems</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Goose 2</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pod-overview.html">Pod Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mechanical-systems.html">Mechanical Subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical-systems.html">Electrical Subsystems</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Software Subsystems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#comms-interfaces">Comms Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raspberry-pi-setup-and-configuration">Raspberry Pi setup and configuration</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">WaterloopDocs</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Software Subsystems</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/teamwaterloop/docs/blob/master/docs/content/goose2/software-systems.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="software-subsystems">
+<span id="software-subsystems"></span><h1>Software Subsystems<a class="headerlink" href="#software-subsystems" title="Permalink to this headline">¶</a></h1>
+<p>Our <a class="reference external" href="https://docs.google.com/document/d/1ZqDp1sfxVkDEsVfQ0Fsqpa6n7totzh_2IA4IrXp5i_4/edit">Superdoc</a>
+is currently our main source of information; that will slowly be migrated here.</p>
+<div class="section" id="comms-interfaces">
+<span id="comms-interfaces"></span><h2>Comms Interfaces<a class="headerlink" href="#comms-interfaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Arduino-Electrical interface: <a class="reference external" href="https://docs.google.com/spreadsheets/d/18PZNkgs89I_vvb521Zw7m2bll4Fvnhqy8EalrwVd7fA/edit#gid=1787642201">Pinout</a></li>
+<li>Raspberry Pi-Arduino interface: <a class="reference external" href="http://htmlpreview.github.io/?https://github.com/teamwaterloop/communication-system/blob/master/communication_format.html">Serial Comms Spec</a></li>
+<li>Dashboard-Raspberry Pi interface: WebSocket Comms Spec - <em>todo</em></li>
+</ul>
+</div>
+<div class="section" id="raspberry-pi-setup-and-configuration">
+<span id="raspberry-pi-setup-and-configuration"></span><h2>Raspberry Pi setup and configuration<a class="headerlink" href="#raspberry-pi-setup-and-configuration" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><a class="reference external" href="https://www.raspberrypi.org/documentation/installation/installing-images/">Flash an OS onto your RPi</a>.<ul>
+<li>We are using Raspbian because it's the best-supported RPi OS, and it has a GUI which is helpful when resolving networking problems.</li>
+</ul>
+</li>
+</ol>
+<ol class="simple">
+<li>Configure the RPi to be remotely accessible.<ul>
+<li>Hook up your RPi to microUSB power, a monitor, and a keyboard. Log in.</li>
+<li>We are using a RPi3, so we have a Wifi module built in. If you are using an older RPi, then you might have to configure your USB Wifi dongle.</li>
+<li>Connect to the Wifi, either through the GUI or by editing <code class="docutils literal"><span class="pre">/etc/network/interfaces</span></code>. Make sure it automatically connects when in range.</li>
+<li>Run <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code>. This is just always a good thing to do after installing.</li>
+<li><a class="reference external" href="https://www.raspberrypi.org/documentation/remote-access/ssh/">Enable SSH</a>.</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p class="first">Set up a static ip on the RPi:</p>
+<ul>
+<li><p class="first">Configure DHCPD: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/dhcpcd.conf</span></code></p>
+</li>
+<li><p class="first">At the very bottom of the file, add the following lines:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>  <span class="n">interface</span> <span class="n">wlan0</span>
+  
+  <span class="n">static</span> <span class="n">ip_address</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.200</span><span class="o">/</span><span class="mi">24</span>
+  <span class="n">static</span> <span class="n">routers</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.1</span>
+  <span class="n">static</span> <span class="n">domain_name_servers</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Reboot <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">reboot</span></code> and check that it worked <code class="docutils literal"><span class="pre">ifconfig</span></code> under wlan0 interface you should see your specified IP address.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="n">wlan0</span>     <span class="n">Link</span> <span class="n">encap</span><span class="p">:</span><span class="n">Ethernet</span>  <span class="n">HWaddr</span> <span class="mi">00</span><span class="p">:</span><span class="mi">0</span><span class="n">F</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="n">CF</span><span class="p">:</span><span class="mi">8</span><span class="n">B</span><span class="p">:</span><span class="mi">42</span>
+             <span class="n">inet</span> <span class="n">addr</span><span class="p">:</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">0.1</span>  <span class="n">Bcast</span><span class="p">:</span><span class="mf">217.149</span><span class="o">.</span><span class="mf">127.63</span>  <span class="n">Mask</span><span class="p">:</span><span class="mf">255.255</span><span class="o">.</span><span class="mf">255.192</span>
+             <span class="n">UP</span> <span class="n">BROADCAST</span> <span class="n">RUNNING</span> <span class="n">MULTICAST</span>  <span class="n">MTU</span><span class="p">:</span><span class="mi">1500</span>  <span class="n">Metric</span><span class="p">:</span><span class="mi">1</span>
+             <span class="n">RX</span> <span class="n">packets</span><span class="p">:</span><span class="mi">2472694671</span> <span class="n">errors</span><span class="p">:</span><span class="mi">1</span> <span class="n">dropped</span><span class="p">:</span><span class="mi">0</span> <span class="n">overruns</span><span class="p">:</span><span class="mi">0</span> <span class="n">frame</span><span class="p">:</span><span class="mi">0</span>
+             <span class="n">TX</span> <span class="n">packets</span><span class="p">:</span><span class="mi">44641779</span> <span class="n">errors</span><span class="p">:</span><span class="mi">0</span> <span class="n">dropped</span><span class="p">:</span><span class="mi">0</span> <span class="n">overruns</span><span class="p">:</span><span class="mi">0</span> <span class="n">carrier</span><span class="p">:</span><span class="mi">0</span>
+             <span class="n">collisions</span><span class="p">:</span><span class="mi">0</span> <span class="n">txqueuelen</span><span class="p">:</span><span class="mi">1000</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><strong>NOTE:</strong> Wifi is being used for convenience during testing. For competition, we need to use interface <code class="docutils literal"><span class="pre">eth0</span></code>, since RPi will be connected to the SpaceX NAP.
+SpaceX allows us to use <code class="docutils literal"><span class="pre">192.168.0.6-254</span></code> inclusive. Gateway is <code class="docutils literal"><span class="pre">192.168.0.1</span></code>. DHCP and DNS are not available.</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol class="simple">
+<li>Remotely access the RPi.<ul>
+<li>You can now disconnect your RPi from the monitor and keyboard. Keep it plugged into power.</li>
+<li>Run <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">pi&#64;&lt;ipaddr&gt;</span></code>. This is now a shell.</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p class="first">NodeJS should come pre-installed, but Raspbian's built-in version is very old.</p>
+<ul>
+<li><p class="first">Make sure you have npm installed properly by observing the output of <code class="docutils literal"><span class="pre">npm</span> <span class="pre">-v</span></code>.</p>
+</li>
+<li><p class="first">if you got <code class="docutils literal"><span class="pre">bash:</span> <span class="pre">npm:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code>, then you have to install npm first</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">npm</span></code></li>
+</ul>
+</li>
+<li><p class="first">Make sure you have node installed properly by observing the output of <code class="docutils literal"><span class="pre">node</span> <span class="pre">-v</span></code>.</p>
+</li>
+<li><p class="first">If your version is below 4.2, then you should update node:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>  $ sudo npm cache clean -f
+  $ sudo npm install -g n
+  $ sudo n stable
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p class="first">Make the RPi run the server upon startup, and restart it upon crash:</p>
+<ul>
+<li><p class="first">Install the PM2 process manager globally: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">pm2</span></code></p>
+</li>
+<li><p class="first">Run the startup configuration command provided by PM2.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>  $ pm2 startup systemd
+  [PM2] Init System found: systemd
+  [PM2] You have to run this command as root. Execute the following command:
+  &lt;command given may vary&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the server with PM2:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>  $ pm2 start server.js
+  $ pm2 save
+</pre></div>
+</div>
+</li>
+<li><p class="first">Now the server will start on boot, and logs can be retrieved via <code class="docutils literal"><span class="pre">pm2</span> <span class="pre">logs</span></code>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol class="simple">
+<li>Clone <code class="docutils literal"><span class="pre">communication-system</span></code> repo from Github:<ul>
+<li>navigate to your home directory in terminal <code class="docutils literal"><span class="pre">cd</span> <span class="pre">~/</span></code></li>
+<li>clone repo <code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/teamwaterloop/communication-system.git</span></code></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div>Now you have the entire communication pipeline on RPI. Navigate to server script <code class="docutils literal"><span class="pre">cd</span> <span class="pre">communication-system/server</span></code>. Start it by running <code class="docutils literal"><span class="pre">pm2</span> <span class="pre">start</span> <span class="pre">server.js</span></code></div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="electrical-systems.html" class="btn btn-neutral" title="Electrical Subsystems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Waterloop.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
