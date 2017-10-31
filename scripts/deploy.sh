@@ -10,7 +10,7 @@ VERSION=$(python -c 'import sphinx; print sphinx.__version__')
 echo "Starting to update gh-pages\n"
 
 #copy data we're interested in to other place
-cp -R _build/html $HOME/dist
+cp -R docs/_build/html $HOME/dist
 
 #go to home and setup git
 cd $HOME

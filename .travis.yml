@@ -11,6 +11,7 @@ install:
 script:
     - bash ./scripts/docwizard.sh -build
 after_success:
+    - chmod +x scripts/deploy.sh
     - bash ./scripts/deploy.sh
 env:
   global:
