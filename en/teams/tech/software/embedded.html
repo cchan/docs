@@ -100,29 +100,29 @@
 <li class="toctree-l2"><a class="reference internal" href="web-internal.html">Internal Website</a></li>
 <li class="toctree-l2"><a class="reference internal" href="backend.html">Backend/Communication-Systems</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Embedded Systems</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#platformio"><strong>PlatformIO</strong></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#installing-platformio-core"><strong>Installing PlatformIO Core</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creating-platformio-projects"><strong>Creating PlatformIO Projects</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#commandline-platformio"><strong>Commandline PlatformIO</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#working-with-platformio-projects"><strong>Working with PlatformIO Projects</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platformio">PlatformIO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installing-platformio-core">Installing PlatformIO Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-platformio-projects">Creating PlatformIO Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commandline-platformio">Commandline PlatformIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-platformio-projects">Working with PlatformIO Projects</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#repository-guidelines"><strong>Repository Guidelines</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#coding-style"><strong>Coding Style</strong></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#whitespacing"><strong>Whitespacing</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variable-naming"><strong>Variable Naming</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#function-naming"><strong>Function Naming</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#class-member-ordering"><strong>Class Member Ordering</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#full-example"><strong>Full Example</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repository-guidelines">Repository Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding Style</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#whitespacing">Whitespacing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variable-naming">Variable Naming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-naming">Function Naming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-member-ordering">Class Member Ordering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#full-example">Full Example</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#code-documentation"><strong>Code Documentation</strong></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#headers"><strong>Headers</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#methods-functions"><strong>Methods/functions</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#classes"><strong>Classes</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enum"><strong>Enum</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#useful-tags"><strong>Useful tags</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#full-example"><strong>Full Example</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-documentation">Code Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#headers">Headers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods-functions">Methods/functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enum">Enum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#useful-tags">Useful tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#full-example">Full Example</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +210,7 @@
 <span id="embedded-systems"></span><h1>Embedded Systems<a class="headerlink" href="#embedded-systems" title="Permalink to this headline">¶</a></h1>
 <p>Embedded systems play a crucial role for the success of Waterloop at hyperloop competition. This team writes the code that directly runs on the pod. They have to ensure that the code they write is safe and fast because even a delay of a second can cause problems when pod is travelling so fast in the hyperloop tube. Waterloop is using Arduino based embedded systems for their Goose 3 pod. The current specs have not been decided on yet.</p>
 <div class="section" id="platformio">
-<span id="platformio"></span><h2><strong>PlatformIO</strong><a class="headerlink" href="#platformio" title="Permalink to this headline">¶</a></h2>
+<span id="platformio"></span><h2>PlatformIO<a class="headerlink" href="#platformio" title="Permalink to this headline">¶</a></h2>
 <p>Waterloo code base will be compiled and uploaded to Arduino using <a class="reference external" href="http://platformio.org/">PlatformIO</a>. This ecosystem makes it convenient to run and manage complex and large scale projects. It uses makefiles and board dependencies, that it manages on it own, to make sure the code gets compiled successfully. Few benefits of PlatformIO:</p>
 <ul class="simple">
 <li>Freedom to use any editor and many <a class="reference external" href="http://docs.platformio.org/en/latest/ide.html#ide">supported IDEs</a>.</li>
@@ -218,7 +218,7 @@
 <li>Use almost any OS and carry on from where you left.</li>
 </ul>
 <div class="section" id="installing-platformio-core">
-<span id="installing-platformio-core"></span><h3><strong>Installing PlatformIO Core</strong><a class="headerlink" href="#installing-platformio-core" title="Permalink to this headline">¶</a></h3>
+<span id="installing-platformio-core"></span><h3>Installing PlatformIO Core<a class="headerlink" href="#installing-platformio-core" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://docs.platformio.org/en/latest/core.html">PlatformIO Core</a> is the core software files that make PlatformIO function. Regardless of what text editor or IDE you use, you have to install these core libraries. To install them follow the following steps:</p>
 <ul class="simple">
 <li>Windows<ul>
@@ -240,7 +240,7 @@
 <p>For more information on how to download PlatformIO check their <a class="reference external" href="http://docs.platformio.org/en/latest/installation.html&quot;">installation</a> page.</p>
 </div>
 <div class="section" id="creating-platformio-projects">
-<span id="creating-platformio-projects"></span><h3><strong>Creating PlatformIO Projects</strong><a class="headerlink" href="#creating-platformio-projects" title="Permalink to this headline">¶</a></h3>
+<span id="creating-platformio-projects"></span><h3>Creating PlatformIO Projects<a class="headerlink" href="#creating-platformio-projects" title="Permalink to this headline">¶</a></h3>
 <p>Now that installation of core libraries is done you are ready to create and modify PlatformIO projects. Following are steps you have to follow if you want to create a PlatformIO project:</p>
 <ul class="simple">
 <li>CLion IDE<ul>
@@ -268,7 +268,7 @@
 </ul>
 </div>
 <div class="section" id="commandline-platformio">
-<span id="commandline-platformio"></span><h3><strong>Commandline PlatformIO</strong><a class="headerlink" href="#commandline-platformio" title="Permalink to this headline">¶</a></h3>
+<span id="commandline-platformio"></span><h3>Commandline PlatformIO<a class="headerlink" href="#commandline-platformio" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="87%" />
@@ -290,7 +290,7 @@
 </table>
 </div>
 <div class="section" id="working-with-platformio-projects">
-<span id="working-with-platformio-projects"></span><h3><strong>Working with PlatformIO Projects</strong><a class="headerlink" href="#working-with-platformio-projects" title="Permalink to this headline">¶</a></h3>
+<span id="working-with-platformio-projects"></span><h3>Working with PlatformIO Projects<a class="headerlink" href="#working-with-platformio-projects" title="Permalink to this headline">¶</a></h3>
 <p>Since the code base for Waterloop embedded systems is written in PlatformIO, you will not have to create anything but rather use the code and initialize on your machine. <strong>Wlib</strong> library will follow the same instructions. Following are the steps to do so:</p>
 <ul class="simple">
 <li>Clone the repo on your machine and go the folder</li>
@@ -309,7 +309,7 @@
 </div>
 </div>
 <div class="section" id="repository-guidelines">
-<span id="repository-guidelines"></span><h2><strong>Repository Guidelines</strong><a class="headerlink" href="#repository-guidelines" title="Permalink to this headline">¶</a></h2>
+<span id="repository-guidelines"></span><h2>Repository Guidelines<a class="headerlink" href="#repository-guidelines" title="Permalink to this headline">¶</a></h2>
 <p>We will be using a lot of open source libraries in our projects. If you find an open source library that you want to include, place it in <strong>lib</strong> folder. Follow the following steps to include a library:</p>
 <ul class="simple">
 <li>Make sure library is Arduino compatible. C++ library != Arduino library. If you still really like the C++ library modify it to make it Arduinio compatible.</li>
@@ -338,10 +338,10 @@
 </ul>
 </div>
 <div class="section" id="coding-style">
-<span id="coding-style"></span><h2><strong>Coding Style</strong><a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<span id="coding-style"></span><h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
 <p>The following styling guidelines should be used when naming all variables and functions when writing C/C++ code for the Waterloop embedded software.</p>
 <div class="section" id="whitespacing">
-<span id="whitespacing"></span><h3><strong>Whitespacing</strong><a class="headerlink" href="#whitespacing" title="Permalink to this headline">¶</a></h3>
+<span id="whitespacing"></span><h3>Whitespacing<a class="headerlink" href="#whitespacing" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>4 space indentation</li>
 <li><code class="docutils literal"><span class="pre">{</span></code> go on the same line</li>
@@ -352,7 +352,7 @@
 </ul>
 </div>
 <div class="section" id="variable-naming">
-<span id="variable-naming"></span><h3><strong>Variable Naming</strong><a class="headerlink" href="#variable-naming" title="Permalink to this headline">¶</a></h3>
+<span id="variable-naming"></span><h3>Variable Naming<a class="headerlink" href="#variable-naming" title="Permalink to this headline">¶</a></h3>
 <p>All variable names should be clear and meaningful, including temporary variables whose scope is only a function block or a few lines of code.</p>
 <p>All variable names should use camel case (e.g. colorSensorState, rpmReading).</p>
 <p>First, the following scope prefixes should be used when naming variables, to help identify the scope of the variable.</p>
@@ -374,11 +374,11 @@
 <td colspan="2">nIndex</td>
 </tr>
 <tr class="row-odd"><td>Global Variable</td>
-<td><a href="#id2"><span class="problematic" id="id3">g__</span></a></td>
+<td><a href="#id2"><span class="problematic" id="id3">g_</span></a></td>
 <td colspan="2">g_nLineCount</td>
 </tr>
 <tr class="row-even"><td>Member Variable</td>
-<td><a href="#id2"><span class="problematic" id="id4">m__</span></a></td>
+<td><a href="#id4"><span class="problematic" id="id5">m_</span></a></td>
 <td colspan="2">m_strName</td>
 </tr>
 </tbody>
@@ -435,7 +435,7 @@
 <code class="docutils literal"><span class="pre">static</span> <span class="pre">const</span> <span class="pre">int</span> <span class="pre">TIMER_INTERVAL_MS</span> <span class="pre">=</span> <span class="pre">350;</span></code></p>
 </div>
 <div class="section" id="function-naming">
-<span id="function-naming"></span><h3><strong>Function Naming</strong><a class="headerlink" href="#function-naming" title="Permalink to this headline">¶</a></h3>
+<span id="function-naming"></span><h3>Function Naming<a class="headerlink" href="#function-naming" title="Permalink to this headline">¶</a></h3>
 <p>All function names should be clear and meaningful.</p>
 <p>All function names should use camel case (e.g. <code class="docutils literal"><span class="pre">InitializeColorSensor()</span></code>, <code class="docutils literal"><span class="pre">resetTimers()</span></code>, <code class="docutils literal"><span class="pre">addTfsaAccount()</span></code>).</p>
 <p>The following functions should have names that start with a capital letter:</p>
@@ -450,7 +450,7 @@
 </ol>
 </div>
 <div class="section" id="class-member-ordering">
-<span id="class-member-ordering"></span><h3><strong>Class Member Ordering</strong><a class="headerlink" href="#class-member-ordering" title="Permalink to this headline">¶</a></h3>
+<span id="class-member-ordering"></span><h3>Class Member Ordering<a class="headerlink" href="#class-member-ordering" title="Permalink to this headline">¶</a></h3>
 <p>Whenever you are creating a new class, whether the header file or the implementation file, all members should follow this order:</p>
 <ol class="simple">
 <li>Public static const values</li>
@@ -473,7 +473,7 @@
 </ol>
 </div>
 <div class="section" id="full-example">
-<span id="full-example"></span><h3><strong>Full Example</strong><a class="headerlink" href="#full-example" title="Permalink to this headline">¶</a></h3>
+<span id="full-example"></span><h3>Full Example<a class="headerlink" href="#full-example" title="Permalink to this headline">¶</a></h3>
 <p>The following code was taken for the well-style SensorReader class in the control repository:</p>
 <p>SensorReader.h:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cp">#ifndef CONTROL_SENSORREADER_H</span>
@@ -555,10 +555,10 @@
 </div>
 </div>
 <div class="section" id="code-documentation">
-<span id="code-documentation"></span><h2><strong>Code Documentation</strong><a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h2>
+<span id="code-documentation"></span><h2>Code Documentation<a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Documentation is very important for a project and hence Waterloop must comply with certain documentation standards to make the code base consistent and well documented. Since we will be writing the embedded code in C/C++ we will be using <a class="reference external" href="http://www.stack.nl/~dimitri/doxygen/">doxygen</a> style documentation for our projects. This is very similar to <a class="reference external" href="https://en.wikipedia.org/wiki/Javadoc">Java Docs</a> and hence people familiar wit Java Docs can easily get used to it. This page will list all the rules our team will follow.</p>
 <div class="section" id="headers">
-<span id="headers"></span><h3><strong>Headers</strong><a class="headerlink" href="#headers" title="Permalink to this headline">¶</a></h3>
+<span id="headers"></span><h3>Headers<a class="headerlink" href="#headers" title="Permalink to this headline">¶</a></h3>
 <p>Each file needs to begin with the <strong>&#64;file</strong> command stating the name of the file. This should be followed by a brief description of the file using the <strong>&#64;brief</strong> command. If necessary, you can follow this with a more detailed description. Next you should put your name along with any other person who worked on it using the <strong>&#64;author</strong> tag. This needs to be followed with a bugs section with a list of known bugs using the <strong>&#64;bug</strong> command. If there are no known bugs, explicitly state that using the <strong>&#64;bug</strong> command. Also include a date for the last modification by using <strong>&#64;date</strong> tag. This has to be followed in both .h files and .cpp/.c files. Examples:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/** @file console.h</span>
 <span class="cm"> *  @brief Function prototypes for the console driver.</span>
@@ -593,7 +593,7 @@
 </div>
 </div>
 <div class="section" id="methods-functions">
-<span id="methods-functions"></span><h3><strong>Methods/functions</strong><a class="headerlink" href="#methods-functions" title="Permalink to this headline">¶</a></h3>
+<span id="methods-functions"></span><h3>Methods/functions<a class="headerlink" href="#methods-functions" title="Permalink to this headline">¶</a></h3>
 <p>Before each function, data structure, and macro you should put a comment block giving at least a brief description using the <strong>&#64;brief</strong> command. A brief description will suffice for your data structures but for you macros and functions you will need to use a few more commands. After your description, you should use the <strong>&#64;param</strong> command to describe all of the parameters to your function. These descriptions should be followed by a description of the return value using the <strong>&#64;return</strong> command. Note: When we say &quot;each&quot; function, that is not a strong statement. You can leave out simple helper functions, like a <code class="docutils literal"><span class="pre">max()</span></code> macro, so you don't waste time. Documentation for each method/function must only be placed in the header <strong>.h</strong> files and not in <strong>.cpp/.c</strong> files. Examples:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @brief Example showing how to document a function with Doxygen.</span>
@@ -661,7 +661,7 @@
 </div>
 </div>
 <div class="section" id="classes">
-<span id="classes"></span><h3><strong>Classes</strong><a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<span id="classes"></span><h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
 <p>Classes are documented in a similar fashion to methods but they do not need <strong>&#64;param</strong> and <strong>&#64;return</strong> statements. Class only needs <strong>&#64;brief</strong> for brief info about the class and then more documentation if longer information is needed to be conveyed. For template arguments use <strong>&#64;tparam</strong>. Examples:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/** </span>
 <span class="cm"> *  @brief metafunction for generation of a map of message types to</span>
@@ -678,7 +678,7 @@
 </div>
 </div>
 <div class="section" id="enum">
-<span id="enum"></span><h3><strong>Enum</strong><a class="headerlink" href="#enum" title="Permalink to this headline">¶</a></h3>
+<span id="enum"></span><h3>Enum<a class="headerlink" href="#enum" title="Permalink to this headline">¶</a></h3>
 <p>Enum will be documented by having a <strong>&#64;brief</strong> tag on top of it to briefly explain what is the purpose of this Enum and then more detailed information can be provided after that. It is usually a good idea to document individual options inside the enum using inline comments. They are typed like this: <code class="docutils literal"><span class="pre">/**&lt;SOME_COMMENT</span> <span class="pre">*/</span></code>. Example:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @brief Use brief, otherwise the index won&#39;t have a brief explanation.</span>
@@ -693,13 +693,13 @@
 </div>
 </div>
 <div class="section" id="useful-tags">
-<span id="useful-tags"></span><h3><strong>Useful tags</strong><a class="headerlink" href="#useful-tags" title="Permalink to this headline">¶</a></h3>
+<span id="useful-tags"></span><h3>Useful tags<a class="headerlink" href="#useful-tags" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>&#64;todo</strong> can be used to mention anything that is left to be done</li>
 </ul>
 </div>
 <div class="section" id="full-example">
-<span id="id1"></span><h3><strong>Full Example</strong><a class="headerlink" href="#full-example" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3>Full Example<a class="headerlink" href="#full-example" title="Permalink to this headline">¶</a></h3>
 <p>The code examples below do not necessarily follow our coding standards but they are there for documentation examples. So follow them only for our documentation standards</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/** @file console.h</span>
 <span class="cm"> *  @brief Function prototypes for the console driver.</span>
