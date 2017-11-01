@@ -3,30 +3,29 @@ Waterloop
 
 Canada's Hyperloop, designed and built at the University of Waterloo.
 This is the documentation hub for all components of our pod.
-
 This site is not intended for sharing outside of the team.
 
 .. toctree::
 	:maxdepth: 3
-	:caption: Team Ovierview
+	:caption: Ovierview
 	
 	content/overview/hyperloop-info
 	content/overview/team-info
 	
 .. toctree::
 	:maxdepth: 4
-	:caption: Goose 3
+	:caption: Competition III
 	
-	content/goose3/pod-overview
-	content/goose3/mechanical-systems
-	content/goose3/electrical-systems
-	content/goose3/software-systems
+	content/comp3/overview
+	content/comp3/mechanical-systems
+	content/comp3/electrical-systems
+	content/comp3/software-systems
 	
 .. toctree::
 	:maxdepth: 4
-	:caption: Goose 2
+	:caption: Competition II
 	
-	content/goose2/pod-overview
-	content/goose2/mechanical-systems
-	content/goose2/electrical-systems
-	content/goose2/software-systems
+	content/comp2/overview
+	content/comp2/mechanical-systems
+	content/comp2/electrical-systems
+	content/comp2/software-systems
