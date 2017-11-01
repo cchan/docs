@@ -3,13 +3,13 @@
 Embedded systems play a crucial role for the success of Waterloop at hyperloop competition. This team writes the code that directly runs on the pod. They have to ensure that the code they write is safe and fast because even a delay of a second can cause problems when pod is travelling so fast in the hyperloop tube. Waterloop is using Arduino based embedded systems for their Goose 3 pod. The current specs have not been decided on yet.
 
 
-## **PlatformIO**
+## PlatformIO
 Waterloo code base will be compiled and uploaded to Arduino using [PlatformIO](http://platformio.org/). This ecosystem makes it convenient to run and manage complex and large scale projects. It uses makefiles and board dependencies, that it manages on it own, to make sure the code gets compiled successfully. Few benefits of PlatformIO:
 * Freedom to use any editor and many [supported IDEs](http://docs.platformio.org/en/latest/ide.html#ide).
 * Organizes the code in **src**, **bin** and optionally **examples** folder to give project a good structure.
 * Use almost any OS and carry on from where you left.
 
-### **Installing PlatformIO Core**
+### Installing PlatformIO Core
 
 [PlatformIO Core](http://docs.platformio.org/en/latest/core.html) is the core software files that make PlatformIO function. Regardless of what text editor or IDE you use, you have to install these core libraries. To install them follow the following steps:
 * Windows
@@ -24,7 +24,7 @@ Waterloo code base will be compiled and uploaded to Arduino using [PlatformIO](h
 
 For more information on how to download PlatformIO check their [installation](http://docs.platformio.org/en/latest/installation.html") page.
 
-### **Creating PlatformIO Projects**
+### Creating PlatformIO Projects
 
 Now that installation of core libraries is done you are ready to create and modify PlatformIO projects. Following are steps you have to follow if you want to create a PlatformIO project:
 
@@ -44,8 +44,8 @@ Now that installation of core libraries is done you are ready to create and modi
   * Read [PlatformIO IDE get started](http://docs.platformio.org/en/latest/ide/atom.html#quick-start) page to learn about how to create and manage projects
 * Other IDE
   * Follow the instructions on [PlatformIO Other IDEs installation](http://docs.platformio.org/en/latest/ide.html#other-ide)
-
-### **Commandline PlatformIO**
+  
+### Commandline PlatformIO
 
 ```eval_rst
 +--------------------------------------------------------------------------------------+-------------+
@@ -57,7 +57,7 @@ Now that installation of core libraries is done you are ready to create and modi
 +--------------------------------------------------------------------------------------+-------------+
 ```
 
-### **Working with PlatformIO Projects**
+### Working with PlatformIO Projects
 
 Since the code base for Waterloop embedded systems is written in PlatformIO, you will not have to create anything but rather use the code and initialize on your machine. **Wlib** library will follow the same instructions. Following are the steps to do so:
 
@@ -71,7 +71,7 @@ Since the code base for Waterloop embedded systems is written in PlatformIO, you
 
 These are all the information you need to get started with PlatformIO. For information in detail check [PlatformIO docs](http://docs.platformio.org/en/latest/)
 
-## **Repository Guidelines**
+## Repository Guidelines
 
 We will be using a lot of open source libraries in our projects. If you find an open source library that you want to include, place it in **lib** folder. Follow the following steps to include a library:
 
@@ -93,11 +93,11 @@ When making changes to the code and pushing changes, follow the following guidel
 * Document the code as described in [Coding Documentation](#code-documentation) outlined below. **This is again must and everyone must oblige to keep the code well documented**.
 * If writing a library like we are doing for **Wlib** create a folder for your feature in **examples** folder and create a **.ino** file that uses your feature. Make this file as detailed so that the person using this library can see how to use your feature. The **.ino** file will be an arduino file so follow the Arduino project guidelines.
 
-## **Coding Style**
+## Coding Style
 
 The following styling guidelines should be used when naming all variables and functions when writing C/C++ code for the Waterloop embedded software.
 
-### **Whitespacing**
+### Whitespacing
 - 4 space indentation
 - `{` go on the same line
 - No space between function name and `(`
@@ -105,7 +105,7 @@ The following styling guidelines should be used when naming all variables and fu
 - Space between class name and `{`
 - Space between `if` and `(`, `)` and `{`
 
-### **Variable Naming**
+### Variable Naming
 
 All variable names should be clear and meaningful, including temporary variables whose scope is only a function block or a few lines of code.
 
@@ -119,9 +119,9 @@ First, the following scope prefixes should be used when naming variables, to hel
 +=================+========+==============+
 | Local Variable  | None   | nIndex       |
 +-----------------+--------+--------------+
-| Global Variable | g__    | g_nLineCount |
+| Global Variable | g_     | g_nLineCount |
 +-----------------+--------+--------------+
-| Member Variable | m__    | m_strName    |
+| Member Variable | m_     | m_strName    |
 +-----------------+--------+--------------+
 ```
 
@@ -152,7 +152,7 @@ Third, another type prefix should be used when naming variables, to help further
 Exception: all static const values should be all caps and use underscores to separate words. For example
 `static const int TIMER_INTERVAL_MS = 350;`
 
-### **Function Naming**
+### Function Naming
 
 All function names should be clear and meaningful.
 
@@ -166,7 +166,7 @@ The following functions should have names that start with a small letter:
 1. Protected member functions
 2. Private member functions
 
-### **Class Member Ordering**
+### Class Member Ordering
 
 Whenever you are creating a new class, whether the header file or the implementation file, all members should follow this order:
 1. Public static const values
@@ -186,7 +186,7 @@ If a member is not mentioned in above list, use your best judgement of where it 
 2. Static members come before non-static member.
 3. Functions come before values.
 
-### **Full Example**
+### Full Example
 
 The following code was taken for the well-style SensorReader class in the control repository:
 
@@ -269,10 +269,10 @@ SensorReader::~SensorReader() {
 }
 ```
 
-## **Code Documentation**
+## Code Documentation
 Documentation is very important for a project and hence Waterloop must comply with certain documentation standards to make the code base consistent and well documented. Since we will be writing the embedded code in C/C++ we will be using [doxygen](http://www.stack.nl/~dimitri/doxygen/) style documentation for our projects. This is very similar to [Java Docs](https://en.wikipedia.org/wiki/Javadoc) and hence people familiar wit Java Docs can easily get used to it. This page will list all the rules our team will follow.
 
-### **Headers**
+### Headers
 Each file needs to begin with the **@file** command stating the name of the file. This should be followed by a brief description of the file using the **@brief** command. If necessary, you can follow this with a more detailed description. Next you should put your name along with any other person who worked on it using the **@author** tag. This needs to be followed with a bugs section with a list of known bugs using the **@bug** command. If there are no known bugs, explicitly state that using the **@bug** command. Also include a date for the last modification by using **@date** tag. This has to be followed in both .h files and .cpp/.c files. Examples:
 
 ```cpp
@@ -308,7 +308,7 @@ Each file needs to begin with the **@file** command stating the name of the file
  */
 ```
 
-### **Methods/functions**
+### Methods/functions
 Before each function, data structure, and macro you should put a comment block giving at least a brief description using the **@brief** command. A brief description will suffice for your data structures but for you macros and functions you will need to use a few more commands. After your description, you should use the **@param** command to describe all of the parameters to your function. These descriptions should be followed by a description of the return value using the **@return** command. Note: When we say "each" function, that is not a strong statement. You can leave out simple helper functions, like a ``max()`` macro, so you don't waste time. Documentation for each method/function must only be placed in the header **.h** files and not in **.cpp/.c** files. Examples:
 
 ```cpp
@@ -379,7 +379,7 @@ int putbyte( char ch );
 void putbytes(const char* s, int len);
 ```
 
-### **Classes**
+### Classes
 Classes are documented in a similar fashion to methods but they do not need **@param** and **@return** statements. Class only needs **@brief** for brief info about the class and then more documentation if longer information is needed to be conveyed. For template arguments use **@tparam**. Examples:
 
 ```cpp
@@ -396,7 +396,7 @@ class generate_callback_map
 };
 ```
 
-### **Enum**
+### Enum
 
 Enum will be documented by having a **@brief** tag on top of it to briefly explain what is the purpose of this Enum and then more detailed information can be provided after that. It is usually a good idea to document individual options inside the enum using inline comments. They are typed like this: ``/**<SOME_COMMENT */``. Example:
 
@@ -412,10 +412,10 @@ enum Switch {
 };
 ```
 
-### **Useful tags**
+### Useful tags
 * **@todo** can be used to mention anything that is left to be done
 
-### **Full Example**
+### Full Example
 The code examples below do not necessarily follow our coding standards but they are there for documentation examples. So follow them only for our documentation standards
 
 ```cpp
