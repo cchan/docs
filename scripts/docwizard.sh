@@ -82,11 +82,20 @@ if [ "$1" == "-build" ]; then
     
 	make html
 	cd _build/html
+	echo "Build Complete"
 	
+	echo "Adding CNAME"
 	if [ cnameURL != "none" ]; then
 		echo "creating CNAME in html: $(pwd)"	
 		echo ${cnameURL} > CNAME
 	fi
+	echo "CNAME added"
+	
+	# link prose.io with the docs
+	echo "Linking Pose editor with the docs"
+	/usr/bin/find . -type f -name '*.html' -print0 | xargs -0 -n 50 perl -pi -e 's/Edit on GitHub/Edit/g'
+	/usr/bin/find . -type f -name '*.html' -print0 | xargs -0 -n 50 perl -pi -e 's!https://github.com/!http://prose.io/#!g'
+	echo "Pose editor linked, WaterloopDocs build complete!"
 elif [ "$1" == "-install" ]; then
 	echo "Installing tools to build WaterlooDocs"
 	
