@@ -10,7 +10,7 @@ fi
 
 dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 echo "Changing dir to scripts folder: ${dir}"
-cd ${dir}
+cd "${dir}"
 
 if [ "$1" == "-h" ] || [ "$1" == "-help" ]; then
 	echo "Usage: $(basename "$0") [-h] [-help] [-install] [-build c] [-clean] [-run p]"
@@ -39,13 +39,30 @@ which python > /dev/null
 # install python if there is such need
 if  [ ! $? -eq 0 ]; then
 	echo "Installing python"
-	sudo apt-get install python
+	apt-get install python
 	
 	if [ $? -eq 0 ]; then
 		echo "Python installed successfully"
 	fi
 else
 	echo "Python is already installed"
+fi
+
+# check for pip
+echo "Checking for Pip"
+which pip > /dev/null
+
+# install pip if there is such need
+if  [ ! $? -eq 0 ]; then
+        echo "Installing pip"
+        apt-get install python-pip
+	    pip install --upgrade pip
+	
+        if [ $? -eq 0 ]; then
+                echo "Pip installed successfully"
+        fi
+else
+        echo "Pip is already installed"
 fi
 
 # if generate argument is provided
@@ -62,7 +79,7 @@ if [ "$1" == "-build" ]; then
 	if [ ! -d "_build" ]; then
 		mkdir _build
 	fi	
-
+    
 	make html
 	cd _build/html
 	
@@ -74,7 +91,7 @@ elif [ "$1" == "-install" ]; then
 	echo "Installing tools to build WaterlooDocs"
 	
 	echo "Installing required libraries for Sphinx"
-	pip install Sphinx
+	pip install sphinx
 	pip install recommonmark
 	pip install sphinx_rtd_theme
 elif [ "$1" == "-run" ]; then
