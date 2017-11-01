@@ -1,7 +1,4 @@
-Hyperloop
-==========
-
-## Overview
+# Hyperloop
 
 Hyperloop is a concept proposed by Elon Muslk, to develop a mode of passenger and/or freight transportation.
 According to Elon Musk's visions, the idea is to incorprorate reduced-pressure tubes in which presurized 
@@ -15,12 +12,3 @@ and [Hyperloop Transportation Technologies](http://hyperloop.global/).
 ## SpaceX Hyperloop Competition
 SpaceX annouced the Hyperloop Pod Competition in 2015. This Competition challenges university teams to design and build the best and the fastest transport pod.
 This competition has no affilication with any Hyperloop company. Two competitions have happened so far and the third one is happening in 2018.
-
-### Competition I
-The Competition I happened in January 2017 in California, U.S.A
-
-### Competition II
-The Competition II happened in August 2018 in California, U.S.A
-
-### Competition III
-The Competition I is scheduled to take place in the summer of 2018 in California, U.S.A

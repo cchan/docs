@@ -1,3 +1,0 @@
-# Overview
-
-Pose Integration Test
