@@ -1,29 +1,32 @@
 Team Information
 ================
 
-We are a team from Waterloo competing at SpaceX Hyperloop Competition. We are based at University of Waterloo
-and most of our team members are from this University. Our goal is to innovate the field of transportation
-and make Hyperloop a reality.
+We are a student design team at the University of Waterloo competing at the SpaceX Hyperloop Competition.
 
 ## Mission
-- To strongly represent Waterloo as a hub for innovation through the SpaceX Hyperloop Competition
-- To advance transportation technology
-- To teach team members technical skills and strong engineering practices
+- To strongly represent Waterloo as a hub for Canadian innovation through the SpaceX Hyperloop Competition.
+- To bring the future of human transportation closer.
+- To teach technical skills, strong engineering practices, and teamwork.
 
 ## Team Governance
-### Board of Directors
-- **Technical Lead**
+
+### Executive Team
+- **Technical Director**
     - Clive Chan
-- **Administrative Lead**
+- **Administrative Director**
     - Jason Pan
-- **Integration Engineeers**
+- **Integration Engineers**
     - Jimmy Zhou
     - Ben Tonita
-- **Consultants**
+- **Safety Captain**
+    - Kelvin Tezinde
+- **Members at large**
     - Deep Dhillon
     - Nicholas Jelich
-    - Victor Quan
-    - Kelvin Tezinde
+- **Advisors**
+    - Serhiy Yarusevych
+    - Victor Qian
+
 ### Technical Sub-team Leads
 - **Propulsion**
     - Jimmy Zhou
@@ -38,6 +41,7 @@ and make Hyperloop a reality.
 - **Software**
     - Deep Dhillon
     - Ruslan Nikolaev
+
 ### Administrative Sub-team Leads
 - **Media/Marketing**
     - Natalia Zigante
@@ -45,3 +49,5 @@ and make Hyperloop a reality.
     - Nicholas Jelich
 - **Finance**
     - Turja Aninda
+- **Web**
+    - Melissa Tran
