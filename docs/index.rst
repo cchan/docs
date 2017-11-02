@@ -14,7 +14,7 @@ General
 	en/team
 	
 .. toctree::
-	:caption: TECHNICAL TEAMS
+	:caption: Technical Team
 	
 	en/teams/tech/mechanical/index
 	en/teams/tech/electrical/index
@@ -22,13 +22,13 @@ General
 
 	
 .. toctree::
-	:caption: SPACEX HYPERLOOP COMPETITION
+	:caption: SpaceX Hyperloop Competition
 	
 	en/comps/comp3/index
 	en/comps/comp2/index
 	
 .. toctree::
-	:caption: MISCELLANEOUS
+	:caption: Miscellaneous
 	
 	en/editing
 	en/building
